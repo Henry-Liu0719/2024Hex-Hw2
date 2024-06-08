@@ -1,0 +1,245 @@
+:root {
+  --main-color: #3B3B3B;
+  --sub-color: #919191;
+  --bg-color:#F9F9F9;
+  --line-height: 1.5rem;
+}
+body {
+  max-width: 191.25rem;
+  font-family: Noto Sans,'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+.wrapper {
+  width: 100%;
+}
+.banner {
+  position: relative;
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+  padding: 2rem 0;
+}
+.banner img{
+  position: absolute;
+  top: 1.75rem;
+}
+.banner-list {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+.banner-list ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.banner-list li {
+  padding: 0.25rem 0.5rem;
+  line-height: var(--line-height);
+  font-weight: 400;
+  position: relative;
+}
+.banner-list li:hover::before {
+  content: '';
+  width: 12.5%;
+  height: 25%;
+  border-top: 1px solid #919191;
+  border-left: 1px solid #919191;
+  position: absolute;
+  left:0;
+  top:0;
+  -webkit-box-reflect: below;
+}
+.banner-list li:hover::after {
+  content: '';
+  width: 12.5%;
+  height: 25%;
+  border-top: 1px solid #919191;
+  border-right: 1px solid #919191;
+  position: absolute;
+  -webkit-box-reflect: below;
+}
+.topic{
+  margin-bottom: 5rem;
+}
+.topic .title-area{
+  margin-top: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.topic img {
+  height: fit-content;
+}
+.topic .title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.sub-topic {
+  /* max-width: 298;
+  margin: 0 auto; */
+  margin-top: 1.5rem;
+  font-weight: 400;
+  line-height: var(--line-height);
+  text-align: center;
+  color: var(--sub-color);
+}
+.main-content{
+  max-width: 1296px;
+  margin: 0 auto;
+  display: flex;
+}
+@media screen and (max-width: 375px) {
+  .main-content {
+    flex-direction: column-reverse;
+  }
+}
+div.articles{
+  max-width: 966px;
+  margin-right: 1.5rem;
+}
+.article {
+  display: flex;
+}
+.article img{
+  border-radius: 0.5rem;
+}
+.article .content {
+  margin-left: 1rem;
+}
+.article .date {
+  padding: 0.25rem 0;
+}
+.article .tag {
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+  background: #f1f1f1;
+  margin-left: 1rem;
+}
+.article h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+.article .text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media screen and (max-width: 375px) {
+  div.articles {
+    margin: 0 2rem;
+  }
+  .article {
+    margin-top: 2.5rem;
+    display: block;
+  }
+  .article .content{
+    margin: 0;
+  }
+  .article .content>div{
+    display: flex;
+  }
+  .article .content>div span{
+    margin-left: auto;
+  }
+  .article img {
+    width: 100%;
+  }
+}
+.menu{
+  max-width: 306px;
+  margin-left: 1.5rem;
+  padding: 5rem;
+}
+.menu ul li{
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color:#5b5b5b;
+}
+.menu ul > li:first-child {
+  width: fit-content;
+  color: #1e1e1e;
+  border-bottom: 2px solid #1e1e1e;
+}
+.menu ul > li:not(:first-child) {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 375px) {
+  .menu {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  .menu .tags {
+    display: flex;
+  }
+  .menu ul > li:not(:first-child){
+    margin: 0;
+  }
+  .menu ul > li{
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 20rem;
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true) no-repeat center;
+}
+footer .text {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #3B3B3B;
+  margin: 1.5rem 0;
+}
+footer .email {
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  color: #919191;
+}
+.social-media > div {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #C1C1C1;
+}
+.social-media > div:first-child {
+  background-color: #000;
+  color: #fff;
+}
+.social-media > div p {
+  line-height: 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: auto 0;
+}
+.social-media > div:not(:first-child) {
+  margin-top: 1.5rem;
+}
+@media screen and (max-width:375px) {
+  footer{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  footer>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  footer .text {
+    margin: 0;
+  }
+}
+
+
